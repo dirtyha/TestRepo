@@ -20,9 +20,11 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+
+    - name: install web app dependencies
       working-directory: ./web
       run: npm ci
-      
+
     - name: build web app
       working-directory: ./web
       run: npm run build
